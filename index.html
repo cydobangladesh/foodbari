@@ -1152,24 +1152,12 @@
     const district = document.getElementById('district').value;
     const notes = document.getElementById('notes').value;
     const msg = `🛒 *নতুন অর্ডার*\n\n👤 নাম: ${name}\n📞 মোবাইল: ${phone}\n📍 ঠিকানা: ${address}\n🏙️ জেলা: ${district}\n\n🛍️ পণ্য: ${product}\n📦 পরিমাণ: ${qty}\n📝 নোট: ${notes}`;
-    const wa = 'https://wa.me/880XXXXXXXXX?text=' + encodeURIComponent(msg);
+    const wa = 'https://wa.me/8801990956886?text=' + encodeURIComponent(msg);
     alert('✅ ধন্যবাদ! আমরা শীঘ্রই আপনার সাথে যোগাযোগ করব।');
     window.open(wa, '_blank');
   }
 
-  // ── LOGO UPLOAD ──
-  document.getElementById('logoInput').addEventListener('change', function(e) {
-    const file = e.target.files[0];
-    if (!file) return;
-    const reader = new FileReader();
-    reader.onload = function(ev) {
-      const img = document.getElementById('logoImg');
-      img.src = ev.target.result;
-      img.style.display = 'block';
-      document.getElementById('logoPlaceholder').style.display = 'none';
-    };
-    reader.readAsDataURL(file);
-  });
+
 
   // Init
   renderProducts('all');
